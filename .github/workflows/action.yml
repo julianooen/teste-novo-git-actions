@@ -10,7 +10,9 @@ on:
     paths:
       - "a/**"
       - ".github/workflows/**"
-      
+    paths-ignore:
+      - "b/**"
+
   pull_request:
     branches: [ "main" ]
 
@@ -23,7 +25,8 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
+    env: 
+      ACTIONS_STEP_DEBUG: true
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -41,6 +44,8 @@ jobs:
 
   novo:
     runs-on: ubuntu-latest
+    env:
+      ACTIONS_STEP_DEBUG: true
     steps:
       - id: random-number-generator
         run: echo "random-id=$(echo $RANDOM)" >> $GITHUB_OUTPUT
