@@ -10,8 +10,8 @@ on:
     paths:
       - "a/**"
       - ".github/workflows/**"
-    paths-ignore:
-      - "b/**"
+    # paths-ignore:
+    #   - "b/**"
 
   pull_request:
     branches: [ "main" ]
