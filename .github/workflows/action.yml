@@ -34,3 +34,12 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.sdsds
+
+  novo:
+    runs-on: ubuntu-latest
+    steps:
+      - id: random-number-generator
+        run: echo "random-id=$(echo $RANDOM)" >> $GITHUB_OUTPUT
+        shell: bash
+    outputs:
+      random-number: ${{ steps.random-number-generator.outputs.random-id }}
