@@ -12,3 +12,11 @@ jobs:
           pwd
           echo "Files in current directory:"
           ls -la
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+      - name: Move to folder
+        run: |
+          cd 04-using-actions/react-app
+          pwd
