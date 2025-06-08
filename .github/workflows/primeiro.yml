@@ -1,4 +1,5 @@
 name: meu primeiro workflow
+run-name: sera i nome aqui
 on:
   push:
     branches:
