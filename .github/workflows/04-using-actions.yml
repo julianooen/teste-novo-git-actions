@@ -27,5 +27,5 @@ jobs:
           echo "aqui >>>>>>>>>"
           ls
           npm ci
-      # - name: Install Dependencies
-      #   run: npm ci
+      - name: location
+        run: pwd
