@@ -1,5 +1,5 @@
 name: meu primeiro workflow
-run-name: sera i nome aqui
+run-name: sera o nome aqui
 on:
   push:
     branches:
