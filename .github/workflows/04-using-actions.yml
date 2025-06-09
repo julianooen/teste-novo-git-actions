@@ -1,7 +1,7 @@
 name: 04 - Using Actions
 on: 
   - workflow_dispatch
-  # - push
+  - push
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -29,5 +29,9 @@ jobs:
           echo "aqui >>>>>>>>>"
           ls
           npm ci
+        # working-directory: 04-using-actions/react-app
       - name: location
         run: pwd
+      - name: run unit test
+        run: npm run test
+        working-directory: 04-using-actions/react-app
