@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       debug:
-        required: true
+        # required: true
         type: boolean
-        # default: false
+        default: false
   push:
 
 env:
