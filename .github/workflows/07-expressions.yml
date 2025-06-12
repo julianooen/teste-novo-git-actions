@@ -28,4 +28,4 @@ jobs:
       - name: "env de teste aqui"
         run: echo ${{env.teste}}
       - name: "variavel de teste aqui"
-        run: echo ${{vars.VAR_TEST}}
+        run: echo ${{vars.VAR_TESTE}}
