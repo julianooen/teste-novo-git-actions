@@ -7,6 +7,8 @@ on:
       debug:
         type: boolean
         default: false
+env:
+  teste: "env de teste"
 jobs:
   echo:
     runs-on: ubuntu-latest
@@ -23,3 +25,7 @@ jobs:
         run: echo "I was triggered from main"
       - name: "Greeting"
         run: echo "Hello, world"
+      - name: "env de teste aqui"
+        run: echo ${{env.teste}}
+      - name: "variavel de teste aqui"
+        run: echo ${{vars.VAR_TEST}}
