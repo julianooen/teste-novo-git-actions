@@ -17,7 +17,7 @@ jobs:
           echo "I will print if previous steps succeed."
 
       - name: I will execute
-        if: ${{ !failure()}}
+        if: ${{ failure()}}
         run: |
           echo "I will print if any previous step fails."
 
