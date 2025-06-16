@@ -10,7 +10,7 @@ jobs:
       - name: Failing step
         run: |
           echo "This is a failing step."
-          exit 0
+          exit 1
 
       - name: I will be skipped
         run: |
