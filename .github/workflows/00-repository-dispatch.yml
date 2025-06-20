@@ -14,3 +14,13 @@ jobs:
           echo "Evento: ${{ github.event.action }}"
           echo "Payload: ${{ toJson(github.event.client_payload) }}"
           echo "Custom Input: ${{ github.event.client_payload.a }}"
+      - name: Roda
+        if: ${{ github.event.action == 'custom-event' }}
+        run: |
+          echo "Roda o evento customizado"
+          echo "tipo: ${{ github.event.client_payload.custom }}"
+      - name: Iniciar
+        if: ${{ github.event.action == 'iniciar-evento' }}
+        run: |
+          echo "Inicia o evento"
+          echo "tipo: ${{ github.event.client_payload.iniciado }}"
