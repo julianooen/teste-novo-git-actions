@@ -12,5 +12,5 @@ jobs:
         run: |
           echo "Disparado via repository_dispatch"
           echo "Evento: ${{ github.event.action }}"
-          echo "Payload: ${{ toJson(github.event.corpo) }}"
-          echo "Custom Input: ${{ github.event.corpo.a }}"
+          echo "Payload: ${{ toJson(github.event.client_payload) }}"
+          echo "Custom Input: ${{ github.event.client_payload.a }}"
