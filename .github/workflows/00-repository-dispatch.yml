@@ -24,3 +24,21 @@ jobs:
         run: |
           echo "Inicia o evento"
           echo "tipo: ${{ github.event.client_payload.iniciado }}"
+
+
+
+
+#           curl --location 'https://api.github.com/repos/julianooen/teste-novo-git-actions/dispatches' \
+# --header 'Accept: application/vnd.github+json' \
+# --header 'Authorization: token meu_token' \
+# --header 'Content-Type: application/json' \
+# --data '{
+#   "event_type": "iniciar-evento",
+#   "event_type": "custom-event",
+#   "client_payload": {
+#     "mensagem": "Olá do Postman",
+#     "a": "eu sou o a",
+#     "iniciado": "vim do evento iniciado",
+#     "custom": "vim do custom"
+#   }
+# }'
