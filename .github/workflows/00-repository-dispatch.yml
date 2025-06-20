@@ -4,7 +4,7 @@ on:
   repository_dispatch:
     types: [custom-event, iniciar-evento]  # tipo de evento personalizado
 env:
-  teste: ${{ github.event.client_payload.verdade && false }}  # variável de ambiente para o payload
+  teste: ${{ github.event.client_payload.verdade || false }}  # variável de ambiente para o payload
 
 jobs:
   run-on-dispatch:
