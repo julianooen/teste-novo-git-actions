@@ -2,7 +2,7 @@ name: Repository Dispatch Listener
 
 on:
   repository_dispatch:
-    types: [custom-event]  # tipo de evento personalizado
+    types: [custom-event, iniciar-evento]  # tipo de evento personalizado
 
 jobs:
   run-on-dispatch:
@@ -13,3 +13,4 @@ jobs:
           echo "Disparado via repository_dispatch"
           echo "Evento: ${{ github.event.action }}"
           echo "Payload: ${{ toJson(github.event.client_payload) }}"
+          echo "Custom Input: ${{ github.event.client_payload.a }}"
