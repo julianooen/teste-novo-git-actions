@@ -21,12 +21,12 @@ jobs:
         id: build
         run: |
           echo "Building..."
-          echo "status=${{ inputs.build-status }}" >> $GITHUB_OUTPUT
-          echo "output1=value1" >> $GITHUB_OUTPUT
-          echo "output2=value2" >> $GITHUB_OUTPUT
+          echo "status=${{ inputs.build-status }}" >> "$GITHUB_OUTPUT"
+          echo "output1=value1" >> "$GITHUB_OUTPUT"
+          echo "output2=value2" >> "$GITHUB_OUTPUT"
           echo "$GITHUB_OUTPUT"
           cat "$GITHUB_OUTPUT"
-          echo "mistake=true" > $GITHUB_OUTPUT
+          echo "mistake=true" > "$GITHUB_OUTPUT"
           cat "$GITHUB_OUTPUT"
 
           
