@@ -1,0 +1,9 @@
+name: reutilizavel
+on:
+  workflow_call:
+jobs:
+  print-ok:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print OK
+        run: echo "OK"

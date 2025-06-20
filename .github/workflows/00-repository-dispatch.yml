@@ -42,6 +42,7 @@ jobs:
 #     "mensagem": "Olá do Postman",
 #     "a": "eu sou o a",
 #     "iniciado": "vim do evento iniciado",
-#     "custom": "vim do custom"
+#     "custom": "vim do custom",
+#     "verdade": true
 #   }
 # }'
