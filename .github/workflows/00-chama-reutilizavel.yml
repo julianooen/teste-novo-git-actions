@@ -4,5 +4,3 @@ on:
 jobs:
   chamar-reutilizavel:
     uses: ./.github/workflows/00-reutilizavel.yml
-    secrets:
-      GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
