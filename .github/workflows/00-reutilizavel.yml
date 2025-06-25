@@ -1,0 +1,10 @@
+name: reutilizavel
+on:
+  workflow_call:
+jobs:
+  teste:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo mensagem de teste
+        run: |
+          echo "foi acionado por outro worflow"

@@ -1,0 +1,10 @@
+name:
+on:
+  workflow_dispatch:
+jobs:
+  chamar-reutilizavel:
+    uses: ./.github/workflows/00-reutilizavel.yml
+    with:
+      teste: 'teste'
+    secrets:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
