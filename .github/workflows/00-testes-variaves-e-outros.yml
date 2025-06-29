@@ -30,6 +30,14 @@ jobs:
           echo " ${{ github.event.inputs.var1 }}"
           echo "LOCAL1=aki é o 2" >> $GITHUB_OUTPUT
           echo "$GITHUB_OUTPUT"
+  teste3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Executa script
+        run: |
+          echo "Executando o script teste.sh"
+          chmod +x .github/scirpts/teste.sh
+          ./.github/scirpts/teste.sh
   fim:
     runs-on: ubuntu-latest
     needs: [teste, teste2]
