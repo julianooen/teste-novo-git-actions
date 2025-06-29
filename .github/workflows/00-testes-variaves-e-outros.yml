@@ -17,7 +17,7 @@ jobs:
         id: exibir-variaveis
         run: |
           echo " ${{ github.event.inputs.var1 }}"
-          echo " LOCAL1=local1haahahah" >> $GITHUB_OUTPUT
+          echo " LOCAL1=local1haahahah" >> "$GITHUB_OUTPUT"
   fim:
     runs-on: ubuntu-latest
     needs: teste
