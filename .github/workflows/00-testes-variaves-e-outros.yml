@@ -1,0 +1,16 @@
+name: Testes de Variáveis e Outros
+run-name: Testes variados de revisão
+on:
+  workflow_dispatch:
+    inputs:
+      var1:
+        description: 'insira a variavel 1'
+        required: true
+        default: 'não teve entrada de valor'
+jobs:
+  teste:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Exibir variáveis
+        run: |
+          echo " ${{ github.event.inputs.var1 }}"
