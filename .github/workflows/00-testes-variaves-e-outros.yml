@@ -19,10 +19,22 @@ jobs:
           echo " ${{ github.event.inputs.var1 }}"
           echo "LOCAL1=${{ github.event.inputs.var1 }}" >> $GITHUB_OUTPUT
           echo "$GITHUB_OUTPUT"
+  teste2:
+    runs-on: ubuntu-latest
+    outputs:
+      local1: ${{ steps.exibir-variaveis2.outputs.LOCAL1}}
+    steps:
+      - name: Exibir variáveis
+        id: exibir-variaveis2
+        run: |
+          echo " ${{ github.event.inputs.var1 }}"
+          echo "LOCAL1=aki é o 2" >> $GITHUB_OUTPUT
+          echo "$GITHUB_OUTPUT"
   fim:
     runs-on: ubuntu-latest
-    needs: teste
+    needs: [teste, teste2]
     steps:
       - name: Exibir variáveis do job anterior
         run: |
           echo " ${{ needs.teste.outputs.local1}}"
+          echo " ${{ needs.teste2.outputs.local1}}"
