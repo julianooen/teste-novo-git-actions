@@ -34,10 +34,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Executa script
-        run: |
-          echo "Executando o script teste.sh"
-          chmod +x .github/scripts/teste.sh
-          ./.github/scripts/teste.sh
+        run: ./.github/scripts/teste.sh
+        shell: bash
   fim:
     runs-on: ubuntu-latest
     needs: [teste, teste2]
