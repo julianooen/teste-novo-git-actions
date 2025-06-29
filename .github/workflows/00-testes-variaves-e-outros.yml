@@ -11,10 +11,10 @@ jobs:
   teste:
     runs-on: ubuntu-latest
     outputs:
-      local1: ${{ steps.exibir.outputs.LOCAL1}}
+      local1: ${{ steps.exibir-dd.outputs.LOCAL1}}
     steps:
       - name: Exibir variáveis
-        id: exibir
+        id: exibir-dd
         run: |
           echo " ${{ github.event.inputs.var1 }}"
           echo "LOCAL1=local1haahahah" >> "$GITHUB_OUTPUT"
