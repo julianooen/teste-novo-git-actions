@@ -36,8 +36,8 @@ jobs:
       - name: Executa script
         run: |
           echo "Executando o script teste.sh"
-          chmod +x .github/scirpts/teste.sh
-          ./.github/scirpts/teste.sh
+          chmod +x .github/scripts/teste.sh
+          ./.github/scripts/teste.sh
   fim:
     runs-on: ubuntu-latest
     needs: [teste, teste2]
