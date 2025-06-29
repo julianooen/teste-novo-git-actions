@@ -33,6 +33,8 @@ jobs:
   teste3:
     runs-on: ubuntu-latest
     steps:
+      - name: a
+        uses: actions/checkout@v3
       - name: Executa script
         run: |
           ls
