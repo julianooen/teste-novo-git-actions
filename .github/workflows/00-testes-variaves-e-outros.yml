@@ -32,10 +32,13 @@ jobs:
           echo "$GITHUB_OUTPUT"
   teste3:
     runs-on: ubuntu-latest
+    outputs:
+      local1: ${{ steps.exibir-variaveis3.outputs.LOCAL1}}
     steps:
       - name: a
         uses: actions/checkout@v3
       - name: Executa script
+        id: exibir-variaveis3
         run: |
           ls
           chmod +x .github/scripts/teste.sh
@@ -43,9 +46,10 @@ jobs:
         shell: bash
   fim:
     runs-on: ubuntu-latest
-    needs: [teste, teste2]
+    needs: [teste, teste2, teste3]
     steps:
       - name: Exibir variáveis do job anterior
         run: |
           echo " ${{ needs.teste.outputs.local1}}"
           echo " ${{ needs.teste2.outputs.local1}}"
+          echo " ${{ needs.teste3.outputs.local1}}"
