@@ -1,4 +1,4 @@
-name: chama reutilizavel
+name: Chama Workflow Reutilizavel
 on:
   workflow_dispatch:
 jobs:
