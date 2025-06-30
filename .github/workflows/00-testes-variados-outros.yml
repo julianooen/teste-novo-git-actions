@@ -53,6 +53,7 @@ jobs:
         with:
           name: file
           path: file.txt
+          retention-days: 1
   artifact-download:
     name: Download File
     runs-on: ubuntu-latest
