@@ -44,6 +44,24 @@ jobs:
           chmod +x .github/scripts/teste.sh
           ./.github/scripts/teste.sh
         shell: bash
+  artifact-upload:
+    name: Upload File
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello World" > file.txt
+      - uses: actions/upload-artifact@v2
+        with:
+          name: file
+          path: file.txt
+  artifact-download:
+    name: Download File
+    runs-on: ubuntu-latest
+    needs: artifact-upload
+    steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: file
+      - run: cat file.txt
   fim:
     runs-on: ubuntu-latest
     needs: [teste, teste2, teste3]
