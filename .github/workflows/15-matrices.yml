@@ -13,7 +13,7 @@ jobs:
           - tag: experimental
             node-version: 21.x
             os: ubuntu-latest
-      fail-fast: false
+      fail-fast: true
 
     runs-on: ${{ matrix.os }}
     name: ${{ matrix.node-version}} - ${{ matrix.os }}
