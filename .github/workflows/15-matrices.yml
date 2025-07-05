@@ -47,7 +47,7 @@ jobs:
             opacity: 100
           - color: red
             shape: triangle
-            opacity: 50
+          - opacity: 50
     name: color - ${{ matrix.color }} - shape - ${{ matrix.shape }} - size - ${{ matrix.size }} - opacity - ${{ matrix.opacity }} 
     steps:
       - name: Dummy step
