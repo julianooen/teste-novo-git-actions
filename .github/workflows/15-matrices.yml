@@ -40,9 +40,10 @@ jobs:
         shape: [circle, square]
         size: [small, large]
         include:
+          - opacity: 50
           - color: red
             shape: triangle
-    name: color - ${{ matrix.color }} - shape - ${{ matrix.shape }} - size - ${{ matrix.size }}
+    name: color - ${{ matrix.color }} - shape - ${{ matrix.shape }} - size - ${{ matrix.size }} - opacity - ${{ matrix.opacity }} 
     steps:
       - name: Dummy step
-        run: echo "color - ${{ matrix.color }} - shape - ${{ matrix.shape }} - size - ${{ matrix.size }}"
+        run: echo "color - ${{ matrix.color }} - shape - ${{ matrix.shape }} - size - ${{ matrix.size }} - opacity - ${{ matrix.opacity }}"
