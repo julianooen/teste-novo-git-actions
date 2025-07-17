@@ -3,6 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       target-env:
+        description: '"dev" or "prod". Controls whether dev dependencies are installed'
         type: choice
         options:
           - dev
