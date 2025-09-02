@@ -9,7 +9,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Install MyCLI
-        uses: julianooen/acoes-personalizadas/.github/actions/my-cli-action@v1
+        uses: julianooen/acoes-personalizadas/.github/actions/my-cli-action@main
         with:
           version: '1.2.3'
       - name: Verify CLI Installation
