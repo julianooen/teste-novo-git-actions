@@ -1,6 +1,7 @@
 adding some exercices:
 | Workflow | Status |
 |----------|--------|
+|00-acao-personalizada|![00-acao-personalizada](https://github.com/julianooen/teste-novo-git-actions/actions/workflows/00-acao-personalizada.yml/badge.svg)|
 |Exercicios de revisão|![VARIADOS](https://github.com/julianooen/teste-novo-git-actions/actions/workflows/00-testes-variados-outros.yml/badge.svg)|
 |Workflow reutilizavel|![REUTILIZAVEL](https://github.com/julianooen/teste-novo-git-actions/actions/workflows/00-chama-reutilizavel.yml/badge.svg)|
 |Repository dispatch|![REPO_DIS](https://github.com/julianooen/teste-novo-git-actions/actions/workflows/00-repository-dispatch.yml/badge.svg)|
