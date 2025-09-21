@@ -6,4 +6,4 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: call action
-              uses: julianooen/actions-practice/.github/actions/01/action@main
+              uses: julianooen/actions-practice/.github/actions/01@main
