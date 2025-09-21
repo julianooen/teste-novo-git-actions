@@ -1,9 +1,16 @@
 name: call action
 on:
     workflow_dispatch:
+        inputs:
+            myInput:
+                description: 'Input to pass to the action'
+                required: false
+                default: 'MOMO'
 jobs:
     call-action:
         runs-on: ubuntu-latest
         steps:
             - name: call action
               uses: julianooen/actions-practice/.github/actions/01@main
+              with:
+                myInput: ${{ github.event.inputs.myInput }}
