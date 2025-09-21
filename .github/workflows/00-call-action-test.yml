@@ -1,0 +1,9 @@
+name: call action
+on:
+    workflow_dispatch:
+jobs:
+    call-action:
+        runs-on: ubuntu-latest
+        steps:
+            - name: call action
+              uses: julianooen/actions-practice/.github/actions/01/action@main
